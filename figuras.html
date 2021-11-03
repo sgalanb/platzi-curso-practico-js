@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geométricas</title>
+</head>
+<body>
+    <header>
+    <h1>Figuras Geométricas</h1>
+    </header>
+
+    <section>
+        <h2>Perímetro y área de un cuadrado</h2>
+        <p>Escribí los siguientes datos de tu cuadrado:</p>
+        <form action="">
+            <label for="inputSquare">Lado:</label>
+            <input id= "inputSquare" type="number">
+            <button type="button" onclick="calcPerimetroCuadrado()">Calcular perímetro</button>
+            <button type="button" onclick="calcAreaCuadrado()">Calcular área</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Perímetro y área de un triángulo</h2>
+        <p>Escribí los siguientes datos de tu triángulo:</p>
+        <form action="">
+            <label for="inputTriBase">Base:</label>
+            <input id= "inputTriBase" type="number">
+
+            <label for="inputTriSide1">Lado 1:</label>
+            <input id= "inputTriSide1" type="number">
+
+            <label for="inputTriSide2">Lado 2:</label>
+            <input id= "inputTriSide2" type="number">
+
+            <label for="inputTriHeight">Altura:</label>
+            <input id= "inputTriHeight" type="number">
+
+            <button type="button" onclick="calcTrianglePerimeter()">Calcular perímetro</button>
+            <button type="button" onclick="calcTriangleArea()">Calcular área</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Altura de un triángulo isósceles</h2>
+        <p>Escribí los siguientes datos de tu triángulo isósceles:</p>
+        <form action="">
+            <label for="inputIsoTriBase">Base:</label>
+            <input id= "inputIsoTriBase" type="number">
+
+            <label for="inputIsoTriSide1">Lado 1:</label>
+            <input id= "inputIsoTriSide1" type="number">
+
+            <label for="inputIsoTriSide2">Lado 2:</label>
+            <input id= "inputIsoTriSide2" type="number">
+
+            <button type="button" onclick="calcIsoscelesTriangleHeight()">Calcular altura</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Perímetro y área de un círculo</h2>
+        <p>Escribí los siguientes datos de tu círculo:</p>
+        <form action="">
+            <label for="inputCirRadius">Radio:</label>
+            <input id= "inputCirRadius" type="number">
+            <button type="button" onclick="calcCirPerimeter()">Calcular perímetro</button>
+            <button type="button" onclick="calcCirArea()">Calcular área</button>
+        </form>
+    </section>
+
+    <script src="figuras.js "></script>
+</body>
+</html>

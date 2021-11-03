@@ -1,2 +1,8 @@
-# platzi-curso-practico-js
-Ejercicios prácticos de JavaScript.
+# Curso Práctico de JavaScript
+
+## 1 | Figuras Geométricas
+
+- Definir las fórmulas
+- Implementar las fórmulas en JavaScript
+- Crear funciones
+- Crear front-end
