@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weighted Average Capital Cost</title>
+</head>
+<body>
+    <section>
+        <h1>Weighted Average Capital Cost</h1>
+
+        <p>El WACC es una tasa que pondera el costo de la deuda financiera y los costos de oportunidad de los accionistas de una empresa, para obtener el costo promedio del capital. Es útil en las finanzas ya que, comparándolo con el ROIC (Return of Invested Capital), podemos estimar qué tan rentable es invertir en una empresa.</p>
+    </section>
+
+    <section>
+        <div>
+            <h2>Nombre de la empresa</h2>
+            <input id="name" type="text" placeholder="Empresa">
+        </div>
+
+        <div>
+            <h2>Estructura de capital</h2>
+            <form action="">
+                <label for="inputWD">Porcentaje de deuda financiera:</label>
+                <input id="inputWD" type='number' min="0" max="100" placeholder="%">
+                <br>
+                <label for="inputWE">Capital de los accionistas:</label>
+                <input id="inputWE" type='number' min="0" max="100" placeholder="%">
+            </form>
+        </div>
+
+        <div>
+            <h2>Costo de la deuda financiera</h2>
+            <form action="">
+                <label for="inputKD">Tasa de interés:</label>
+                <input id="inputKD" type='number' min="0" placeholder="%">
+                <br>
+                <label for="inputTax">Tasa impositiva:</label>
+                <input id="inputTax" type='number' min="0" placeholder="%">
+            </form>
+        </div>
+
+        <div>
+            <h2>Costo del capital de los accionistas</h2>
+            <form action="">
+                <label for="inputRF">Tasa libre de riesgo:</label>
+                <input id="inputRF" type='number' min="0" placeholder="%">
+                <br>
+                <label for="inputRM">Retorno esperado del portafolio de mercado:</label>
+                <input id="inputRM" type='number' min="0" placeholder="%">
+                <br>
+                <label for="inputBeta">Beta:</label>
+                <input id="inputBeta" type='number' min="0" placeholder="β">
+            </form>
+        </div>
+
+        <div>
+            <button type="button" onclick="calcWACC()">Calcular WACC</button>
+        </div>
+
+        <div>
+            <h2>Historial</h2>
+            <div class="table" id="table">
+                
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .table {
+            display: grid;
+            grid-template-columns: 170px repeat(2, 1fr);
+            gap: 4px;
+            margin: 4px 0;
+        }
+        .name {
+            font-weight:bold;
+        }
+    </style>
+
+    <script src="wacc.js"></script>
+</body>
+</html>

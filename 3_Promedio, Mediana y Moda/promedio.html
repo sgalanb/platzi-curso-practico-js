@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio, Mediana y Moda</title>
+</head>
+<body>
+    <h1>Promedio, Mediana y Moda</h1>
+    
+    <form action="">
+        <button type="button" onclick="calcArithmeticAvg(list)">Calcular Promedio</button>
+        <button type="button" onclick="calcMedian(list)">Calcular Mediana</button>
+        <button type="button" onclick="calcMode(list)">Calcular Moda</button>
+    </form>
+
+    <h2>Lista de números</h2>
+    <form action="">
+        <label for="inputNumber">Agregá números a la lista:</label>
+        <input id="inputNumber" type="number">
+        <button type="button" onclick="addToList();">Agregar</button>
+        <button type="button" onclick="resetList();">Borrar lista</button>
+        <button type="button" onclick="orderList();">Ordenar lista</button>
+    </form>
+    <div class='box'>
+        <ul id="ul">
+        </ul>    
+    </div>
+
+    <script src="list.js"></script>
+    <script src="promedio.js"></script>
+</body>
+</html>
