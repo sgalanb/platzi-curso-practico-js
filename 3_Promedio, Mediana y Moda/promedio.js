@@ -28,6 +28,7 @@ function calcArithmeticAvg() {
     );        
 
     let avg = sumList / list.length;
+
     alert(avg);
     return avg;
 }
@@ -39,10 +40,12 @@ function calcMedian() {
     if (isEven(list.length)) {
         let twoHalfsSum = list[halfList] + (list[halfList - 1])
         let median = twoHalfsSum / 2
+
         alert(median);
         return median;
     } else {
         let median = list[halfList];
+
         alert(median);
         return median;
     };
@@ -63,7 +66,20 @@ function calcMode() {
         return a[1] - b[1];
     })
     modeArray = repListArray[repListArray.length - 1];
-    alert(modeArray[0]);
 
+    alert(modeArray[0]);
     return modeArray[0];
+}
+
+// HARMONIC MEAN
+
+function calcHarmMean() {
+    let n = list.length;
+    let sum = list.reduce(fracSum, 0);
+    function fracSum(acc, a) {
+        return acc + (1 / a)
+    };
+
+    alert(n / sum);
+    return n / sum;
 }
