@@ -1,0 +1,63 @@
+/* TITLES */
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1D1D1F;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: normal;
+    color: #1D1D1F;
+}
+
+/* BUTTONS */
+.btn{
+    text-align: center; /*Align the text horizontally*/
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1D1D1F;
+    display: flex;
+    justify-content: center; /*Align the element horizontally*/
+    align-items: center; /*Align the element vertically*/
+    background-color: #F6DF1C;
+    border-radius: 0.9375rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.btn:hover {
+    background-color: #ebd516;
+}
+
+/*SIDEBAR*/
+
+.home-sidebar {
+    position: fixed;
+    left: 0px;
+    display: grid;
+    grid-template-rows: 60px 1fr 60px 60px 60px;
+    align-items: center;
+    width: 60px;
+    height: 100vh;
+    background-color: #1D1D1F;
+}
+
+.icons {
+    height: 45px;
+    width: 45px;
+    margin: 7.5px 7.5px;
+}
+
+.icons-social {
+    height: 30px;
+    width: 30px;
+    margin: 15px 15px;
+    filter: invert(99%) sepia(8%) saturate(2%) hue-rotate(205deg) brightness(117%) contrast(100%);
+}
+
+.icons-social:hover {
+    filter: invert(89%) sepia(0%) saturate(8%) hue-rotate(171deg) brightness(90%) contrast(77%);
+}
