@@ -125,6 +125,8 @@ input {
     padding: 10px;
     -webkit-appearance: none;
     -moz-appearance: textfield;
+    font-size: 1.125rem;
+    font-weight: normal;
 }
 
 input:focus {
