@@ -22,5 +22,5 @@ function calcWACC() {
 
     document.getElementById('table').innerHTML += 
     `<p class="name">${historyList[historyList.length - 1].name}</p>
-    <p class="wacc">${historyList[historyList.length - 1].wacc}%</p><br>`;
+    <p class="wacc">${historyList[historyList.length - 1].wacc}%</p>`;
 }

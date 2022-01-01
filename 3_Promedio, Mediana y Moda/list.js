@@ -3,7 +3,7 @@ var list = []
 function addToList(){
     const inputNumberValue = parseFloat(document.getElementById('inputNumber').value);
     let li = document.createElement('li');
-    let textNode = document.createTextNode(inputNumberValue);
+    let textNode = document.createTextNode('- ' + inputNumberValue);
     li.appendChild(textNode);
     
     if (isNaN(inputNumberValue)) {
@@ -28,7 +28,7 @@ function orderList(){
     document.getElementById("ul").innerHTML = "";
     list.forEach(function(item){
         let li = document.createElement('li');
-        let textNode = document.createTextNode(item);
+        let textNode = document.createTextNode('- ' + item);
         li.appendChild(textNode);
         document.getElementById('ul').appendChild(li);
     })

@@ -4,40 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="porcentajes.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Porcentajes y Descuentos</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/js-challenge-logo.png"/>
 </head>
 <body>
-    <h1>Porcentajes y Descuentos</h1>
+    <section class="home">
+        <div class="home-sidebar">
+            <a href="/index.html"><img class="icons" src="/images/js-challenge-logo.png" alt="platzi javascript challenge logo"></a>
 
-    <section>
-        <h2>Calculá el precio de tus productos con descuento</h2>
+            <a href="/index.html"><img class="icons icons-svg" src="/images/chevron-circle-left-solid.svg" alt="arrow pointing left"></a>
 
-        <form action="">
-            <label for="inputPrice">Precio de lista:</label>
-            <input id="inputPrice" type="number">
-            <label for="inputDiscount">Porcentaje de descuento:</label>
-            <input id="inputDiscount" type="number">
-            <button type="button" onclick="calcPriceWithDiscount()">Calcular precio con descuento</button>
+            <br>
+    
+            <a href="https://platzi.com/p/santiagogalanb/" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/platzi-brands.svg" alt="platzi logo"></a>
+    
+            <a href="https://github.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/github-brands.svg" alt="github logo"></a>
+    
+            <a href="https://twitter.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/twitter-brands.svg" alt="twitter logo"></a>
+        </div>
+        <div class="home-container">
+    
+            <h1 class="title">Porcentajes y Descuentos</h1>
+            
+            <div class="porcentajes-exercises">
+                <section class="exercise">
+                    <h2 class="exercise-title">Precio con descuento</h2>
 
-            <p id="showFinalPriceDiscount"></p>
-        </form>
+                    <form action="">
+
+                        <div class="double-input">
+                            <div class="double-input-item">
+                                <label for="inputPrice">Precio de lista</label>
+                                <input id="inputPrice" type="number">
+                            </div>
+                            <div class="double-input-item">
+                                <label for="inputDiscount">% de descuento</label>
+                                <input id="inputDiscount" type="number">
+                            </div>
+                        </div>
+
+                        <div class="single-input">
+                            <button class="btn input-button" type="button" onclick="calcPriceWithDiscount()">Calcular precio con descuento</button>
+                        </div>
+
+                    </form>
+                </section>
+                
+                <section class="exercise">
+                    <h2 class="exercise-title">Precio con cupón de descuento</h2>
+                
+                    <form action="">
+
+                        <div class="double-input">
+                            <div class="double-input-item">
+                                <label for="inputPrice2">Precio de lista:</label>
+                                <input id="inputPrice2" type="number">
+                            </div>
+                            <div class="double-input-item">
+                                <label for="inputCoupon">Cupón de descuento:</label>
+                                <input id="inputCoupon" type="text">
+                            </div> 
+                        </div>
+
+                        <div class="single-input">
+                            <button class="btn input-button" type="button" onclick="calcPriceWithCoupon()">Calcular precio con descuento</button>
+                        </div>
+
+                        <p id="showFinalPriceCoupon"></p>
+                    </form>
+                </section>
+            </div>
+
+            <p class="extra"> <b>Cupones de prueba:</b> DESCUENTO10</b> ; DESCUENTO25</b> ; DESCUENTO30</b> ; DESCUENTO50</b></p>
+        </div>
     </section>
-
-    <section>
-        <h2>Calculá el precio de tus productos con cupones de descuento</h2>
-
-        <form action="">
-            <label for="inputPrice2">Precio de lista:</label>
-            <input id="inputPrice2" type="number">
-            <label for="inputCoupon">Cupón de descuento:</label>
-            <input id="inputCoupon" type="text">
-            <button type="button" onclick="calcPriceWithCoupon()">Calcular precio con descuento</button>
-
-            <p id="showFinalPriceCoupon"></p>
-        </form>
-    </section>
-
-
     <script src="porcentajes.js"></script>
 </body>
 </html>

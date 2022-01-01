@@ -1,34 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="promedio.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Promedio, Mediana, Moda y Media Armónica</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/js-challenge-logo.png"/>
 </head>
 <body>
-    <h1>Promedio, Mediana, Moda y Media Armónica</h1>
+    <section class="home">
+        <div class="home-sidebar">
+            <a href="/index.html"><img class="icons" src="/images/js-challenge-logo.png" alt="platzi javascript challenge logo"></a>
+
+            <a href="/index.html"><img class="icons icons-svg" src="/images/chevron-circle-left-solid.svg" alt="arrow pointing left"></a>
+
+            <br>
     
-    <form action="">
-        <button type="button" onclick="calcArithmeticAvg(list)">Calcular Promedio</button>
-        <button type="button" onclick="calcMedian(list)">Calcular Mediana</button>
-        <button type="button" onclick="calcMode(list)">Calcular Moda</button>
-        <button type="button" onclick="calcHarmMean(list)">Calcular Media Armónica</button>
-    </form>
+            <a href="https://platzi.com/p/santiagogalanb/" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/platzi-brands.svg" alt="platzi logo"></a>
+    
+            <a href="https://github.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/github-brands.svg" alt="github logo"></a>
+    
+            <a href="https://twitter.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/twitter-brands.svg" alt="twitter logo"></a>
+        </div>
+        <div class="home-container">
+    
+            <h1 class="title">Promedio, Mediana, Moda y Media Armónica</h1>
+            
+            <div class="promedio-exercises">
+                <section class="exercise">
+                    <h2 class="exercise-title">Lista de números</h2>
 
-    <h2>Lista de números</h2>
-    <form action="">
-        <label for="inputNumber">Agregá números a la lista:</label>
-        <input id="inputNumber" type="number">
-        <button type="button" onclick="addToList();">Agregar</button>
-        <button type="button" onclick="resetList();">Borrar lista</button>
-        <button type="button" onclick="orderList();">Ordenar lista</button>
-    </form>
-    <div class='box'>
-        <ul id="ul">
-        </ul>    
-    </div>
+                    <form id="list" action="">
+                        <label for="inputNumber">Agregá números a la lista</label>
+                        <input id="inputNumber" type="number">
 
+                        <div class="triple-input">
+                                <button class="btn triple-input-btn" type="button" onclick="addToList();">Agregar</button>
+                                <button class="btn triple-input-btn" type="button" onclick="resetList();">Borrar lista</button>
+                                <button class="btn triple-input-btn" type="button" onclick="orderList();">Ordenar lista</button>
+                        </div>
+                    </form>
+
+                    <form action="">
+                        <div class="single-input">
+                            <button class="btn input-button" type="button" onclick="calcArithmeticAvg(list)">Calcular promedio</button>
+                        </div>
+                        <div class="single-input">
+                            <button class="btn input-button" type="button" onclick="calcMedian(list)">Calcular mediana</button>
+                        </div>
+                        <div class="single-input">
+                            <button class="btn input-button" type="button" onclick="calcMode(list)">Calcular moda</button>
+                        </div>
+                        <div class="single-input">
+                            <button class="btn input-button" type="button" onclick="calcHarmMean(list)">Calcular media armónica</button>
+                        </div>
+                    </form>
+                    
+                </section>
+                
+                <section class="entry-list">
+                    <h2 class="exercise-title">Lista de números ingresados</h2>
+                    <div>
+                        <ul id="ul">
+                        </ul>    
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
     <script src="list.js"></script>
     <script src="promedio.js"></script>
 </body>

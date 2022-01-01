@@ -1,3 +1,18 @@
+/*BASIC STRUCTURE*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    place-items: center;
+}
+
 /* TITLES */
 .title {
     text-align: center;
@@ -13,8 +28,17 @@
     color: #1D1D1F;
 }
 
+.exercise-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
 /* BUTTONS */
 .btn{
+    text-decoration: none;
     text-align: center; /*Align the text horizontally*/
     font-size: 1rem;
     font-weight: bold;
@@ -33,7 +57,6 @@
 }
 
 /*SIDEBAR*/
-
 .home-sidebar {
     position: fixed;
     left: 0px;
@@ -49,15 +72,107 @@
     height: 45px;
     width: 45px;
     margin: 7.5px 7.5px;
+    display: grid;
+    align-items: center;
 }
 
 .icons-social {
     height: 30px;
     width: 30px;
     margin: 15px 15px;
+    display: grid;
+    align-items: center;
     filter: invert(99%) sepia(8%) saturate(2%) hue-rotate(205deg) brightness(117%) contrast(100%);
 }
 
 .icons-social:hover {
     filter: invert(89%) sepia(0%) saturate(8%) hue-rotate(171deg) brightness(90%) contrast(77%);
+}
+
+.icons-svg {
+    filter: invert(99%) sepia(8%) saturate(2%) hue-rotate(205deg) brightness(117%) contrast(100%);
+}
+
+.icons-svg:hover {
+    filter: invert(89%) sepia(0%) saturate(8%) hue-rotate(171deg) brightness(90%) contrast(77%);
+}
+
+/* EXERCISES */
+.exercise {
+    background-color: #1D1D1F;
+    border-radius: 15px;
+    width: 32.5rem;
+    height: 20rem;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    height: 40px;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+input:focus {
+    outline-style: solid;
+    outline-color: #ebd516;
+    outline-width: 2px;
+}
+
+.single-input {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 5px 0px;
+    height: 69px;
+    width: 420px;
+}
+
+.input-button {
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    margin: 0;
+}
+
+.double-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    height: 69px;
+}
+
+.double-input-item {
+    width: 200px;
+}
+
+.double-input-button {
+    height: 50px;
+    width: 200px;
+    margin: 0;
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
 }

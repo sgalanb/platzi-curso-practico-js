@@ -1,83 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="wacc.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Weighted Average Capital Cost</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/js-challenge-logo.png"/>
 </head>
 <body>
-    <section>
-        <h1>Weighted Average Capital Cost</h1>
+    <section class="home">
+        <div class="home-sidebar">
+            <a href="/index.html"><img class="icons" src="/images/js-challenge-logo.png" alt="platzi javascript challenge logo"></a>
 
-        <p>El WACC es una tasa que pondera el costo de la deuda financiera y los costos de oportunidad de los accionistas de una empresa, para obtener el costo promedio del capital. Es útil en las finanzas ya que, comparándolo con el ROIC (Return of Invested Capital), podemos estimar qué tan rentable es invertir en una empresa.</p>
+            <a href="/index.html"><img class="icons icons-svg" src="/images/chevron-circle-left-solid.svg" alt="arrow pointing left"></a>
+
+            <br>
+    
+            <a href="https://platzi.com/p/santiagogalanb/" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/platzi-brands.svg" alt="platzi logo"></a>
+    
+            <a href="https://github.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/github-brands.svg" alt="github logo"></a>
+    
+            <a href="https://twitter.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/twitter-brands.svg" alt="twitter logo"></a>
+        </div>
+        <div class="home-container">
+    
+                <h1 class="title">Weighted Average Capital Cost</h1>
+        
+                <h2 class="subtitle">Tasa que pondera el costo de la deuda financiera
+                    <br>
+                    y los retornos esperados de los accionistas de una empresa,
+                    <br>
+                    para obtener el costo promedio del capital.</h2>
+        
+                <div class="wacc-exercises">
+                    <section class="exercise">
+
+                        <form action="">
+                            <h2 class="exercise-title">W.A.C.C.</h2>
+                            <div class="single-input">
+                                <label for="">Nombre de la empresa</label>
+                                <input id="name" type="text" placeholder="Empresa">
+                            </div>
+
+                            <div class="double-input">
+                                <div class="double-input-item">
+                                    <label for="inputWD">Deuda financiera</label>
+                                    <input id="inputWD" type='number' min="0" max="100" placeholder="%">
+                                </div>
+                                <div class="double-input-item">
+                                    <label for="inputWE">Capital de accionistas</label>
+                                    <input id="inputWE" type='number' min="0" max="100" placeholder="%">
+                                </div>
+                            </div>
+
+                            <div class="double-input">
+                                <div class="double-input-item">
+                                    <label for="inputKD">Tasa de interés</label>
+                                    <input id="inputKD" type='number' min="0" placeholder="%">
+                                </div>
+                                <div class="double-input-item">
+                                    <label for="inputTax">Tasa impositiva</label>
+                                    <input id="inputTax" type='number' min="0" placeholder="%">
+                                </div>
+                            </div>
+
+                            <div class="double-input">
+                                <div class="double-input-item">
+                                    <label for="inputRF">Tasa libre de riesgo</label>
+                                    <input id="inputRF" type='number' min="0" placeholder="%">
+                                </div>
+                                <div class="double-input-item">
+                                    <label for="inputBeta">Beta</label>
+                                    <input id="inputBeta" type='number' min="0" placeholder="β">
+                                </div>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="inputRM">Retorno esperado del portafolio de mercado</label>
+                                <input id="inputRM" type='number' min="0" placeholder="%">
+                            </div>
+
+                            <div class="single-input" id="single-button">
+                                <button class="btn input-button" type="button" onclick="calcWACC()">Calcular WACC</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="entry-list">
+                        <form action="">
+                            <h2 class="exercise-title" id="history">Historial</h2>
+                            <div class="table" id="table">
+                            </div>
+                        </form>
+
+                    </section>
+                </div>
+        </div>
     </section>
-
-    <section>
-        <div>
-            <h2>Nombre de la empresa</h2>
-            <input id="name" type="text" placeholder="Empresa">
-        </div>
-
-        <div>
-            <h2>Estructura de capital</h2>
-            <form action="">
-                <label for="inputWD">Porcentaje de deuda financiera:</label>
-                <input id="inputWD" type='number' min="0" max="100" placeholder="%">
-                <br>
-                <label for="inputWE">Capital de los accionistas:</label>
-                <input id="inputWE" type='number' min="0" max="100" placeholder="%">
-            </form>
-        </div>
-
-        <div>
-            <h2>Costo de la deuda financiera</h2>
-            <form action="">
-                <label for="inputKD">Tasa de interés:</label>
-                <input id="inputKD" type='number' min="0" placeholder="%">
-                <br>
-                <label for="inputTax">Tasa impositiva:</label>
-                <input id="inputTax" type='number' min="0" placeholder="%">
-            </form>
-        </div>
-
-        <div>
-            <h2>Costo del capital de los accionistas</h2>
-            <form action="">
-                <label for="inputRF">Tasa libre de riesgo:</label>
-                <input id="inputRF" type='number' min="0" placeholder="%">
-                <br>
-                <label for="inputRM">Retorno esperado del portafolio de mercado:</label>
-                <input id="inputRM" type='number' min="0" placeholder="%">
-                <br>
-                <label for="inputBeta">Beta:</label>
-                <input id="inputBeta" type='number' min="0" placeholder="β">
-            </form>
-        </div>
-
-        <div>
-            <button type="button" onclick="calcWACC()">Calcular WACC</button>
-        </div>
-
-        <div>
-            <h2>Historial</h2>
-            <div class="table" id="table">
-                
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .table {
-            display: grid;
-            grid-template-columns: 170px repeat(2, 1fr);
-            gap: 4px;
-            margin: 4px 0;
-        }
-        .name {
-            font-weight:bold;
-        }
-    </style>
 
     <script src="wacc.js"></script>
 </body>

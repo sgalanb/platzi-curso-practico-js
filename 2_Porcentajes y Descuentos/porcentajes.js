@@ -8,7 +8,7 @@ function calcPriceWithDiscount() {
     var valuePrice = parseFloat(document.getElementById('inputPrice').value);
     var valueDiscount = parseFloat(document.getElementById('inputDiscount').value);
     const finalPriceDiscount = priceWithDiscount(valuePrice, valueDiscount);
-    document.getElementById('showFinalPriceDiscount').innerText = 'Precio con descuento: $' + finalPriceDiscount;
+    alert('Precio con descuento: $' + finalPriceDiscount);
 };
 
 // Cupones
@@ -16,28 +16,28 @@ function calcPriceWithCoupon() {
     var valuePrice2 = parseFloat(document.getElementById('inputPrice2').value);
     var textCoupon = document.getElementById('inputCoupon').value;
     switch (textCoupon) {
-        case 'CUPON-EJEMPLO-1':
+        case 'DESCUENTO10':
             var cuponejemplo1 = 10;
             const finalPriceCoupon = priceWithDiscount(valuePrice2, cuponejemplo1);
-            document.getElementById('showFinalPriceCoupon').innerText = 'Precio con cupón de descuento aplicado: $' + finalPriceCoupon;
+            alert('Precio con cupón de descuento aplicado: $' + finalPriceCoupon);
             break;
-        case 'CUPON-EJEMPLO-2':
+        case 'DESCUENTO25':
             var cuponejemplo2 = 25;
             const finalPriceCoupon2 = priceWithDiscount(valuePrice2, cuponejemplo2);
-            document.getElementById('showFinalPriceCoupon').innerText = 'Precio con cupón de descuento aplicado: $' + finalPriceCoupon2;
+            alert('Precio con cupón de descuento aplicado: $' + finalPriceCoupon2);
             break;
-        case 'EJEMPLO-CUPON-1':
+        case 'DESCUENTO30':
             var cuponejemplo3 = 30;
             const finalPriceCoupon3 = priceWithDiscount(valuePrice2, cuponejemplo3);
-            document.getElementById('showFinalPriceCoupon').innerText = 'Precio con cupón de descuento aplicado: $' + finalPriceCoupon3;
+            alert('Precio con cupón de descuento aplicado: $' + finalPriceCoupon3);
             break;
-        case 'EJEMPLO-CUPON-2':
+        case 'DESCUENTO50':
             var cuponejemplo4 = 50;
             const finalPriceCoupon4 = priceWithDiscount(valuePrice2, cuponejemplo4);
-            document.getElementById('showFinalPriceCoupon').innerText = 'Precio con cupón de descuento aplicado: $' + finalPriceCoupon4;
+            alert('Precio con cupón de descuento aplicado: $' + finalPriceCoupon4);
             break;
         default:
-            document.getElementById('showFinalPriceCoupon').innerText = 'El cupón ingesado no es válido.'
+            alert('El cupón ingesado no es válido.');
             break;
     }    
 };

@@ -1,0 +1,23 @@
+.home-container {
+    place-items: center;
+    grid-column-start: 2;
+}
+
+.figuras-exercises {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr
+}
+
+.title {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.btn {
+    border-width: 0px;
+}
+
+/* SIDEBAR */
+.home-sidebar {
+    grid-template-rows: 60px 60px 1fr 60px 60px 60px;
+}

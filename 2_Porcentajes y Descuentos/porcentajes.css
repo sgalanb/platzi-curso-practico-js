@@ -1,0 +1,32 @@
+.home-container {
+    place-items: center;
+    grid-column-start: 2;
+}
+
+.porcentajes-exercises {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.btn {
+    border-width: 0px;
+}
+
+.extra {
+    background-color: #1D1D1F;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* SIDEBAR */
+.home-sidebar {
+    grid-template-rows: 60px 60px 1fr 60px 60px 60px;
+}
