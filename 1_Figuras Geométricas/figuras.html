@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/platzi-curso-practico-js/styles.css">
     <link rel="stylesheet" href="figuras.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Figuras Geométricas</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/js-challenge-logo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="/platzi-curso-practico-js/images/js-challenge-logo.png"/>
 </head>
 <body>
     <section class="home">
         <div class="home-sidebar">
-            <a href="/index.html"><img class="icons" src="/images/js-challenge-logo.png" alt="platzi javascript challenge logo"></a>
+            <a href="/index.html"><img class="icons" src="/platzi-curso-practico-js/images/js-challenge-logo.png" alt="platzi javascript challenge logo"></a>
 
-            <a href="/index.html"><img class="icons icons-svg" src="/images/chevron-circle-left-solid.svg" alt="arrow pointing left"></a>
+            <a href="/index.html"><img class="icons icons-svg" src="/platzi-curso-practico-js/images/chevron-circle-left-solid.svg" alt="arrow pointing left"></a>
 
             <br>
     
-            <a href="https://platzi.com/p/santiagogalanb/" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/platzi-brands.svg" alt="platzi logo"></a>
+            <a href="https://platzi.com/p/santiagogalanb/" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/platzi-curso-practico-js/images/platzi-brands.svg" alt="platzi logo"></a>
     
-            <a href="https://github.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/github-brands.svg" alt="github logo"></a>
+            <a href="https://github.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/platzi-curso-practico-js/images/github-brands.svg" alt="github logo"></a>
     
-            <a href="https://twitter.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/images/twitter-brands.svg" alt="twitter logo"></a>
+            <a href="https://twitter.com/sgalanb" target="_blank" rel="noreferrer noopener"><img class="icons-social" src="/platzi-curso-practico-js/images/twitter-brands.svg" alt="twitter logo"></a>
         </div>
         <div class="home-container">
     
@@ -41,8 +41,8 @@
                         </div>
                       
                         <div class="double-input">
-                            <button class="btn double-input-button" type="button" onclick="calcPerimetroCuadrado()">Calcular perímetro</button>
-                            <button class="btn double-input-button" type="button" onclick="calcAreaCuadrado()">Calcular área</button>
+                            <button class="btn double-input-button left" type="button" onclick="calcPerimetroCuadrado()">Calcular perímetro</button>
+                            <button class="btn double-input-button right" type="button" onclick="calcAreaCuadrado()">Calcular área</button>
                         </div>
                     </form>
                 </section>
@@ -57,8 +57,8 @@
                         </div>
 
                         <div class="double-input">
-                            <button class="btn double-input-button" type="button" onclick="calcCirPerimeter()">Calcular perímetro</button>
-                            <button class="btn double-input-button" type="button" onclick="calcCirArea()">Calcular área</button>
+                            <button class="btn double-input-button left" type="button" onclick="calcCirPerimeter()">Calcular perímetro</button>
+                            <button class="btn double-input-button right" type="button" onclick="calcCirArea()">Calcular área</button>
                         </div>
                     </form>
                 </section>
@@ -67,28 +67,28 @@
                     <h2 class="exercise-title">Perímetro y área de un triángulo</h2>
                     <form action="">
                         <div class="double-input">
-                            <div class="double-input-item">
+                            <div class="double-input-item left">
                                 <label for="inputTriSide1">Lado 1</label>
                                 <input id= "inputTriSide1" type="number">
                             </div>
-                            <div class="double-input-item">
+                            <div class="double-input-item right">
                                 <label for="inputTriSide2">Lado 2</label>
                                 <input id= "inputTriSide2" type="number">
                             </div>
                         </div>
                         <div class="double-input">
-                            <div class="double-input-item">
+                            <div class="double-input-item left">
                                 <label for="inputTriBase">Base</label>
                                 <input id= "inputTriBase" type="number">
                             </div>
-                            <div class="double-input-item">
+                            <div class="double-input-item right">
                                 <label for="inputTriHeight">Altura</label>
                                 <input id= "inputTriHeight" type="number">
                             </div>
                         </div>
                         <div class="double-input">
-                            <button class="btn double-input-button" type="button" onclick="calcTrianglePerimeter()">Calcular perímetro</button>
-                            <button class="btn double-input-button" type="button" onclick="calcTriangleArea()">Calcular área</button>
+                            <button class="btn double-input-button left" type="button" onclick="calcTrianglePerimeter()">Calcular perímetro</button>
+                            <button class="btn double-input-button right" type="button" onclick="calcTriangleArea()">Calcular área</button>
                         </div>
                     </form>
                 </section>
@@ -98,12 +98,12 @@
                     <form action="">
 
                         <div class="double-input">
-                            <div class="double-input-item">
+                            <div class="double-input-item left">
                                 <label for="inputIsoTriSide1">Lado 1</label>
                                 <input id= "inputIsoTriSide1" type="number">
                             </div>
 
-                            <div class="double-input-item">
+                            <div class="double-input-item right">
                                 <label for="inputIsoTriSide2">Lado 2</label>
                                 <input id= "inputIsoTriSide2" type="number">
                             </div>
