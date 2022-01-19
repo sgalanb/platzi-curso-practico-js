@@ -1,5 +1,7 @@
 # Curso Práctico de JavaScript
 
+## [Diseño en Figma](https://www.figma.com/file/kg7uGMuZTxMVFB9A3qbaW2/Curso-b%C3%A1sico-de-JavaScript?node-id=17%3A125)
+
 ## 1 | Figuras Geométricas
 
 - Definir las fórmulas
